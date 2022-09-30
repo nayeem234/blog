@@ -9,7 +9,7 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\AdminViewController;
 use App\Http\Controllers\postController;
 use App\Http\Controllers\newsController;
-
+use App\Http\Controllers\sportsController;
 
 Route::get('/', [frontendController::class, 'front']);
 Route::get('/backend', [backendController::class, 'backend']);
@@ -44,9 +44,24 @@ Route::get('editPost/{id}', [postController::class,'preview']);
 Route::post('editPost',[postController::class,'edit']);
 
 
-
 Route::get('news', [newsController::class,'index']);
-Route::post('news', [newsController::class,'store']);
+Route::post('newAdd', [newsController::class,'store']);
+Route::get('deleteNews/{id}', [newsController::class,'delete']);
+Route::get('editNews/{id}', [newsController::class,'preview']);
+Route::post('editNews',[newsController::class,'edit']);
+
+Route::get('newses1',[newsController::class,'add_model']);
+
+
+Route::get('sports', [sportsController::class,'index']);
+Route::post('sportsAdd', [sportsController::class,'store']);
+Route::get('deleteSports/{id}', [sportsController::class,'delete']);
+Route::get('editSports/{id}', [sportsController::class,'preview']);
+Route::post('editSports',[sportsController::class,'edit']);
+
+Route::get('sports1',[sportsController::class,'add_sports']);
+
+
 
 
 

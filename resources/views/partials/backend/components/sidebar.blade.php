@@ -8,6 +8,15 @@
             <a href="{{ url('backend') }}">
                 <li> Post</li>
             </a>
+
+            <a href="{{ url('sports')}}">
+                <li> Sports</li>
+            </a>
+
+
+
+
+
         </ul>
     </div>
 </div>
